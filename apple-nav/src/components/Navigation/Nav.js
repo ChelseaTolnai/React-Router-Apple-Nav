@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { navLinkData } from '../../data/NavData'
 
 const MainNavContainer = styled.div`
     background-color: #313131;
@@ -17,18 +16,11 @@ const NavIcon = styled.i`
 `
 const StyledNavLink = styled(NavLink)`
     text-decoration: none;
-    color: ${() => navLink.color};
+    color: #FFFFFF;
     :hover {
         color: #B6B6B6;
     }
 `
-const navLink = {
-    color: "#FFFFFF",
-};
-
-// const activeNavLink = {
-//     color: "#B6B6B6",
-// };
 
 const Nav = (props) => {
     return (
@@ -38,6 +30,9 @@ const Nav = (props) => {
                 <StyledNavLink 
                     to={`/${item.mainNav.toLowerCase()}`} 
                     key={item.mainNav} 
+                    activeStyle={{
+                        color: "#B6B6B6"
+                    }}
                 >
                     {item.mainNav}
                 </StyledNavLink>

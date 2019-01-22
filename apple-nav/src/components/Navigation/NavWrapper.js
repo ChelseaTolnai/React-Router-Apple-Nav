@@ -15,26 +15,23 @@ class NavWrapper extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            navLinkData: [],
-            subLinkData: [],
-            navID: 0,
-        }
-    }
-
-    componentDidMount = () => {
-        this.setState({
             navLinkData,
-            subLinkData: navLinkData[this.state.navID].subNavs,
-        })
+        }
     }
 
     render() {
         return (
             <NavContainer>
-                <Nav navLinkData={this.state.navLinkData} />
                 <Route
-                    path={`/:${this.state.navID}`}
-                    render={props => <SubNav {...props} subLinkData={this.state.subLinkData} />}
+                    path={'/'}
+                    render={props => 
+                    <Nav {...props} navLinkData={this.state.navLinkData}/>}
+                />
+                <Route
+                    exact
+                    path={'/:navID'}
+                    render={props => 
+                    <SubNav {...props} navLinkData={this.state.navLinkData} />}
                 />
             </NavContainer>
         );

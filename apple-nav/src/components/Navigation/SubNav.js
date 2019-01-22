@@ -6,11 +6,14 @@ const SubNavContainer = styled.div`
     color: #333333;
 `
 
+const target = 0;
+
 const SubNav = (props) => {
+    console.log(props.match.params.navID)
     return (
         <SubNavContainer>
-            {props.subLinkData.map( item => 
-                <div>{item.img} {item.name}</div>)}
+            {props.navLinkData[target].subNavs.map( item => 
+                <div key={item.name}>{item.img} {item.name}</div>)}
         </SubNavContainer>
     );
   }
