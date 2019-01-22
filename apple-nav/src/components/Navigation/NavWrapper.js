@@ -1,13 +1,19 @@
 import React from 'react';
 import Nav from './Nav';
-import SubNav from './SubNav'
+import SubNav from './SubNav';
+import styled from 'styled-components';
+
+const NavContainer = styled.div`
+background-color: #313131;
+color: #FFFFFF;
+`
 
 const NavWrapper = () => {
     return (
-        <div>
+        <NavContainer>
             <Nav />
             <SubNav />
-        </div>
+        </NavContainer>
     );
   }
   
