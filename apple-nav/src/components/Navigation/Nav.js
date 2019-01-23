@@ -37,6 +37,7 @@ const Nav = (props) => {
                     {item.mainNav}
                 </StyledNavLink>
             )}
+            <StyledNavLink to='/'>Support</StyledNavLink>
             <StyledNavLink to='/'><NavIcon className="fa fa-search"></NavIcon></StyledNavLink>
             <StyledNavLink to='/'><NavIcon className="fa fa-shopping-bag"></NavIcon></StyledNavLink>
         </MainNavContainer>

@@ -6,9 +6,11 @@ import styled from 'styled-components';
 import { navLinkData } from '../../data/NavData'
 
 const NavContainer = styled.div`
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-size: 62.5%;
-font-size: 0.9em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
 `
 
 class NavWrapper extends Component {
